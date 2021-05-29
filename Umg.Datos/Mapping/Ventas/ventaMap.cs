@@ -7,19 +7,25 @@ using Umg.Entidades.Ventas;
 
 namespace Umg.Datos.Mapping.Ventas
 {
-    public class detalle_ventaMap : IEntityTypeConfiguration<detalle_venta>
+    public class ventaMap : IEntityTypeConfiguration<venta>
     {
-        public void Configure(EntityTypeBuilder<detalle_venta> builder)
+        public void Configure(EntityTypeBuilder<venta> builder)
         {
-            builder.ToTable("detalle_venta")
-                   .HasKey(c => c.id_detalle_venta);
-            builder.Property(c => c.cantidad_detalle_venta)
+            builder.ToTable("venta")
+                   .HasKey(c => c.idventa);
+            builder.Property(c => c.tipo_comprobante_venta)
                 .HasMaxLength(50);
-            builder.Property(c => c.precio_detalle_venta)
+            builder.Property(c => c.serie_comprobante)
                .HasMaxLength(50);
-            builder.Property(c => c.descuento_detalle_venta)
+            builder.Property(c => c.num_comprobante_venta)
                .HasMaxLength(50);
-          
+            builder.Property(c => c.fecha_hora_venta)
+              .HasMaxLength(50);
+            builder.Property(c => c.impuesto)
+              .HasMaxLength(50);
+            builder.Property(c => c.total)
+              .HasMaxLength(50);
+           
         }
 
 
