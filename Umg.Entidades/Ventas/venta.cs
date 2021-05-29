@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using Umg.Entidades.Usuario;
+
 
 namespace Umg.Entidades.Ventas
 {
-   public class venta
+    public class venta
     {
- 
+
         public int idventa { get; set; }
         [Required]
 
@@ -57,5 +59,8 @@ namespace Umg.Entidades.Ventas
             {
             }
         }
+        List<Persona> Personas { get; set; }
+        List<Usuario> Usuarios { get; set; }
+       
     }
 }

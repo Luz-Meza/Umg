@@ -15,22 +15,24 @@ namespace Umg.Datos
     {
         public DbSet<Categoria> Categorias { get; set; }
 
-        public DbSet<Articulos> Articulo { get; set; }
+        public DbSet<Articulos> Articuloss { get; set; }
 
-        public DbSet<Persona> Persona { get; set; }
+        public DbSet<Persona> Personas { get; set; }
 
-        public DbSet<Rol> Rol { get; set; }
+        public DbSet<Rol> Rols { get; set; }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarioss { get; set; }
 
 
-        public DbSet<detalle_ingreso> detalle_ingreso { get; set; }
+        public DbSet<detalle_ingreso> detalle_ingresos { get; set; }
 
-        public DbSet<detalle_venta> detalle_venta { get; set; }
+        public DbSet<detalle_venta> detalle_ventas { get; set; }
 
-        public DbSet<ingreso> ingreso { get; set; }
+        public DbSet<ingreso> ingresos { get; set; }
 
-        public DbSet<venta> venta { get; set; }
+        public DbSet<venta> ventas { get; set; }
+        public object Articulos { get; set; }
+
         public DbContexSistema (DbContextOptions<DbContexSistema> options) : base(options)
         {
         }

@@ -57,5 +57,10 @@ namespace Umg.Entidades.Almacen
             {
             }
         }
+
+        //realcion con la tabla categorias
+        public Categoria categoria { get; set; }
+
+
     }
 }

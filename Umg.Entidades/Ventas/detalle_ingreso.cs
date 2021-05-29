@@ -1,13 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-using System.Text;
+using Umg.Entidades.Almacen;
 
 namespace Umg.Entidades.Ventas
 {
-   public class detalle_ingreso
+    public class detalle_ingreso
     {
-    
         public int id_detalle_ingreso { get; set; }
         [Required]
 
@@ -25,7 +23,7 @@ namespace Umg.Entidades.Ventas
             }
         }
 
-        public Usuarios.Persona persona
+        public Usuario.Persona persona
         {
             get => default;
             set
@@ -33,12 +31,16 @@ namespace Umg.Entidades.Ventas
             }
         }
 
-        public Usuarios.Persona persona1
+        public Usuario.Persona persona1
         {
             get => default;
             set
             {
             }
         }
+
+        List<detalle_ingreso> Ingreso { get; set; }
+        List<Articulos> Articulo { get; set; }
+
     }
 }

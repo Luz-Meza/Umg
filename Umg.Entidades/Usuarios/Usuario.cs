@@ -70,6 +70,10 @@ namespace Umg.Entidades.Usuario
             {
             }
         }
+
+        //relacion con la tabla roles
+        public List<Rol> Roles { get; set; }
+
     }
 }
 
