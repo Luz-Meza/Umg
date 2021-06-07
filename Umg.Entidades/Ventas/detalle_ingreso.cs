@@ -42,5 +42,28 @@ namespace Umg.Entidades.Ventas
         List<detalle_ingreso> Ingreso { get; set; }
         List<Articulos> Articulo { get; set; }
 
+        public Usuario.Persona Persona
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Usuario.Persona Persona1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public detalle_venta detalle_venta1
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

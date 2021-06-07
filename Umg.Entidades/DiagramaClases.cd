@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Las personas tiene muchos roles">
+    <Position X="2.915" Y="7.782" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="el ingreso  pude tener muchas categorias">
+    <Position X="3.46" Y="5.222" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Los articulos pueden tener mucho detalle del ingreso">
+    <Position X="10.228" Y="2.497" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="las personas tiene muchos usuarios">
+    <Position X="1.191" Y="5.26" Height="0.509" Width="1.206" />
+  </Comment>
+  <Class Name="Umg.Entidades.Ventas.detalle_ingreso">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEEAAAAAAAAAAAAAIDAAAAAACAAAAQgAEAEAAgAAAA=</HashCode>
+      <FileName>Ventas\detalle_ingreso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="detalle_venta1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Almacen.Articulos">
+    <Position X="13" Y="2" Width="1.5" />
+    <AssociationLine Name="detalle_ingreso2" Type="Umg.Entidades.Ventas.detalle_ingreso">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.018" Y="0.504" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAEAAAACAAAEAAIAAAACAkAABAAIAAgAwAAAA=</HashCode>
+      <FileName>Almacen\Articulos.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="detalle_ingreso1" />
+      <Property Name="detalle_venta1" />
+      <Property Name="detalle_ingreso2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Almacen.Categoria">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAIAAAAAAAACAAAEAAAAEAAAAAAAAAAAAAEADAAA=</HashCode>
+      <FileName>Almacen\Categoria.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Articulos2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Ventas.detalle_venta">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAEAAAAIBAAAAAAAAAEAAAAAQACAgAAAAAAEA=</HashCode>
+      <FileName>Ventas\detalle_venta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umg.Entidades.Ventas.ingreso">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Persona" Type="Umg.Entidades.Usuario.Persona" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.75" Y="2.812" />
+        <Point X="0.5" Y="2.812" />
+        <Point X="0.5" Y="3.584" />
+        <Point X="0.224" Y="3.584" />
+        <Point X="0.224" Y="5.37" />
+        <Point X="0.14" Y="5.37" />
+        <Point X="0.14" Y="6.562" />
+        <Point X="0.75" Y="6.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAIAEAAAAAAhQAAAQAAAAAgAAAAAQIAEAAQAAAA=</HashCode>
+      <FileName>Ventas\ingreso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="venta1" />
+      <Property Name="Persona" />
+      <Property Name="Categoria" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Ventas.venta">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAgAAAAAAAAAAAAKABAICCAAQABABAGAAAAgAAgA=</HashCode>
+      <FileName>Ventas\venta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="detalle_venta6" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Usuario.Usuario">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAEAAEIACgAAAAQAAA8gEAAgAAAAAAAQAEAAI=</HashCode>
+      <FileName>Usuarios\Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="venta1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Usuario.Persona">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <AssociationLine Name="Usuario2" Type="Umg.Entidades.Usuario.Usuario" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="8.888" />
+        <Point X="2.625" Y="8.888" />
+        <Point X="2.625" Y="3.375" />
+        <Point X="3.5" Y="3.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAIICgAAAAAAAAAAIAAgAAABAEAQIGAgI=</HashCode>
+      <FileName>Usuarios\Persona.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rol" />
+      <Property Name="Usuario2" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Umg.Entidades.Usuario.Rol">
+    <Position X="5.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAABAAIICgAFgAAAAAAAIAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Usuarios\Rol.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario1" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

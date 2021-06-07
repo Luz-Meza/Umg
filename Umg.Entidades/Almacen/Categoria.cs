@@ -19,6 +19,28 @@ namespace Umg.Entidades.Almacen
 
         public ICollection<Articulos> articulos { get; set; }
 
+        public Articulos Articulos
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
+        public Articulos Articulos1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Articulos Articulos2
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

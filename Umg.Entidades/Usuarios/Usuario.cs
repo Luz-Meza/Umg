@@ -74,6 +74,29 @@ namespace Umg.Entidades.Usuario
         //relacion con la tabla roles
         public List<Rol> Roles { get; set; }
 
+        public Rol Rol3
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Rol Rol4
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Ventas.venta venta1
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
 

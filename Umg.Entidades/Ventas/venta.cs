@@ -61,6 +61,29 @@ namespace Umg.Entidades.Ventas
         }
         List<Persona> Personas { get; set; }
         List<Usuario> Usuarios { get; set; }
-       
+
+        public detalle_venta detalle_venta4
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public detalle_venta detalle_venta5
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public detalle_venta detalle_venta6
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
